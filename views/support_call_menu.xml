@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+
+        <record model="ir.ui.view" id="view_my_nepali_datepicker_form">
+            <field name="name">my.nepali.date.model.form</field>
+            <field name="model">my.nepali.date.model</field>
+            <field name="arch" type="xml">
+                <form string="My Nepali Datepicker Form">
+                    <sheet>
+                        <group>
+                            <field name="nepali_date" widget="multiple_datepicker"/>
+                            <field name="test_field" widget="multiple_datepicker"/>
+
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+
+        <!-- Define action for the menu item -->
+        <record id="action_support_call" model="ir.actions.act_window">
+            <field name="name">Support Calls</field>
+            <field name="res_model">my.nepali.date.model</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_my_nepali_datepicker_form"/>
+
+        </record>
+
+
+        <menuitem id="menu_support_log"
+        name="Call Log"
+        sequence="10"
+        action="action_support_call"
+    />
+    </data>
+</odoo>
+

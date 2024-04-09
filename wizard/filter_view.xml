@@ -1,0 +1,30 @@
+<odoo>
+    <data>
+        <record id="view_support_call_wizard" model="ir.ui.view">
+            <field name="name">Support Call Wizard</field>
+            <field name="model">support.call.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Support Call Wizard">
+                    <group>
+                        <field name="date_start"/>
+                        <field name="date_end"/>
+                    </group>
+                    <footer>
+                        <button string="Generate Report" name="check_report" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_support_call_wizard" model="ir.actions.act_window">
+            <field name="name">Support Call Wizard</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">support.call.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+            <menuitem id="menu_report_call_log_summary" name="Date Wizard" action="action_support_call_wizard" parent="support_call.menu_support_call" sequence="110"/>
+
+    </data>
+</odoo>

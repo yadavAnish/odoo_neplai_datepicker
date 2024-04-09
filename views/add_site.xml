@@ -1,0 +1,31 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_my_nepali_datepicker_form">
+            <field name="name">my.nepali.date.model.form</field>
+            <field name="model">my.nepali.date.model</field>
+            <field name="arch" type="xml">
+                <form string="My Nepali Datepicker Form">
+                    <sheet>
+                        <group>
+                            <field name="nepali_date" widget="nepali_datepicker"/>
+                            <field name="ad_date"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+              <record model="ir.ui.view" id="view_my_nepali_datepicker_tree">
+            <field name="name">my.nepali.date.model.form</field>
+            <field name="model">my.nepali.date.model</field>
+            <field name="arch" type="xml">
+                <tree>
+                            <field name="nepali_date" widget="nepali_datepicker"/>
+                            <field name="ad_date"/>
+
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

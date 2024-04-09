@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<odoo>
+<record id="action_call_log" model="ir.actions.act_window"> 
+  <field name="name">Support call</field> 
+  <field name="model">support.call</field> 
+  <field name="arch" type="xml"> 
+    <tree >
+      <field name="Caller_name"/>  
+      <field name="Caller"/> 
+      <field name="Date"/> 
+      <field name="Site"/> 
+      <field name="Remarks"/> 
+      <field name="current_user"/>
+      <field name="active" invisible="1"/>
+
+    </tree> 
+  </field> 
+</record> 
+</odoo>

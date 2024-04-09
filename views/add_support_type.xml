@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<odoo>
+<record id="view_support_type" model="ir.ui.view">
+        <field name="name"> Add support Type</field>
+        <field name="model">support.type</field>
+        <field name="arch" type="xml">
+            <form> 
+                <sheet> 
+                    <group name="group_top"> 
+                    <group name="group_left"> 
+                        <field name="remarks"/>
+                    </group> 
+                    </group> 
+                </sheet> 
+
+            </form>
+        </field>
+    </record>
+
+<record id="view_tree_support_type" model="ir.ui.view"> 
+  <field name="name">Support Type</field> 
+  <field name="model">support.type</field> 
+  <field name="arch" type="xml"> 
+    <tree > 
+      <field name="remarks"/>  
+    </tree> 
+  </field> 
+</record>
+
+
+<record id="view_site" model="ir.ui.view">
+        <field name="name"> Site</field>
+        <field name="model">call.site</field>
+        <field name="arch" type="xml">
+            <form> 
+                <sheet> 
+                    <group name="group_top"> 
+                    <group name="group_left"> 
+                        <field name="Site"/>
+                    </group> 
+                    </group> 
+                </sheet> 
+
+            </form>
+        </field>
+    </record>
+
+
+
+
+<record id="view_tree_site" model="ir.ui.view"> 
+  <field name="name">Site</field> 
+  <field name="model">call.site</field> 
+  <field name="arch" type="xml"> 
+    <tree > 
+      <field name="Site"/>  
+    </tree> 
+  </field> 
+</record>
+
+</odoo>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_support_call_summary">
+            <t t-call="report.html_container">
+                <!-- <t t-foreach="docs" t-as="o"> -->
+                    <t t-call="report.external_layout">
+                        
+                        
+                        <div class="page">
+                        <div class="header">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <h1>Support Call Report</h1>
+                                   <p>Date Range: <span t-esc="docs['date_start']"/> to <span t-esc="docs['date_end']"/></p> 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                            <table class="table table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th>Caller Phone</th>
+                                        <th>Caller Name</th>
+                                        <th>Date</th>
+                                        <th>Time Duration</th>
+                                        <th>Site Served</th>
+                                        <th>Support Type</th>
+                                        <th>Resolved By</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <t t-foreach="docs['support_calls']" t-as="record">
+                                        <tr>
+                                            <td><span t-esc="record.Caller"/></td>
+                                            <td><span t-esc="record.Caller_name"/></td>
+                                            <td><span t-esc="record.Date"/></td>
+                                            <td><span t-esc="record.Duration"/></td>
+                                            <td><span t-esc="record.Site.Site"/></td>
+                                            <td><span t-esc="record.Remarks.remarks"/></td>
+                                            <td><span t-esc="record.current_user.name"/></td>
+                                        </tr>
+                                    </t>  
+                                </tbody>
+                            </table>
+                        </div>
+                    </t>
+                </t>
+           <!-- </t>  -->
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<odoo>
+<report id="support_call.report_support_call"
+    model="support.call"
+    string="Call Log Report"
+    report_type="qweb-pdf"
+    name="support_call.report_support_call"
+    file="support_call.report_support_call"
+    menu="True"/>
+
+</odoo>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<odoo>
+    
+<record id="pivot_support_call_dashboard" model="ir.ui.view"> 
+  <field name="name">Support call Dashboard</field> 
+  <field name="model">support.call</field> 
+  <field name="arch" type="xml"> 
+    <pivot > 
+      <field name="Site"/> 
+       
+    </pivot> 
+  </field> 
+</record> 
+
+<record id="pivot_support_call_graph" model="ir.ui.view"> 
+  <field name="name">Support call Dashboard</field> 
+  <field name="model">support.call</field> 
+  <field name="arch" type="xml"> 
+    <graph > 
+      <field name="Site"/>
+      <field name="Remarks"/> 
+    </graph> 
+  </field> 
+</record>
+</odoo>
